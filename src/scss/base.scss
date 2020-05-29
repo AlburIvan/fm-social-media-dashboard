@@ -1,0 +1,40 @@
+body.dark-theme {
+    --toggle-color: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --background-color: hsl(230, 17%, 14%);
+    --top-background-pattern: hsl(232, 19%, 15%);
+    --card-background: hsl(228, 28%, 20%);
+    --text-color: hsl(228, 34%, 66%);
+    --card-text: hsl(0, 0%, 100%);
+    --card-hover: hsl(228, 28%, 25%);
+}
+
+body {
+   
+    font-family: 'Inter';
+    --toggle-color: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --background-color: hsl(0, 0%, 100%);
+    --top-background-pattern: hsl(225, 100%, 98%);
+    --card-background: hsl(227, 47%, 96%);
+    --text-color: hsl(228, 12%, 44%);
+    --card-text: hsl(230, 17%, 14%);
+    --card-hover: hsl(228, 12%, 84%);
+
+    @apply transition-colors duration-1000;
+}
+
+
+.bg-instagram {
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.bg-app {
+    background: linear-gradient(180deg, var(--top-background-pattern) 5%, var(--top-background-pattern) 10%, var(--background-color) 10% );
+}
+
+@screen lg {
+    .bg-app {
+        background: linear-gradient(180deg, var(--top-background-pattern) 25%, var(--top-background-pattern) 25%, var(--background-color) 25% );
+    }
+}
+
+

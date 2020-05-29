@@ -1,0 +1,33 @@
+.dark-mode-toggle {
+    @apply relative inline-block w-12 h-6;
+
+    & input {
+        @apply w-0 h-0 opacity-0;
+
+        &:checked + span {
+            @apply delay-100;
+            background: var(--toggle-color);
+        }
+
+        &:checked + span:before {
+            @apply bg-topBackground;
+            transform: translateX(0);
+        }
+
+        &:focus + span {
+            box-shadow: 0 0 1px #2196F3;
+        }
+    }
+
+    & span {
+        @apply absolute top-0 bottom-0 left-0 right-0 rounded-full transition-all duration-300 ease-in cursor-pointer bg-gray-500;
+
+        &::before {
+            content: "";
+            left: 4px;
+            bottom: 4px;
+            transform: translateX(24px);
+            @apply absolute w-4 h-4 rounded-full bg-white transition-all duration-300 ease-in;
+        }
+    }
+}
