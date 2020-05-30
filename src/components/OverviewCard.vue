@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row justify-between p-6 mb-8 mr-1 transition-colors duration-200 rounded-lg cursor-pointer bg-cardBackground hover:bg-cardHover lg:w-1/5">
+    <div class="flex flex-row justify-between p-6 mb-8 mr-1 transition-colors duration-200 rounded-lg cursor-pointer bg-cardBackground hover:bg-cardHover">
         <div class="flex flex-col justify-between">
             <p class="font-bold text-text">{{ metric }}</p>
             <p class="mt-4 text-3xl font-bold leading-none text-cardText">{{ value }}</p>

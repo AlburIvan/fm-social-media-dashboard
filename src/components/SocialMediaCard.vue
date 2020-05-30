@@ -1,6 +1,6 @@
 <template>
 
-    <div class="flex flex-col items-center justify-around transition-colors duration-200 rounded-lg cursor-pointer bg-cardBackground lg:w-1/5 hover:bg-cardHover">
+    <div class="flex flex-col items-center justify-around transition-colors duration-200 rounded-lg cursor-pointer bg-cardBackground hover:bg-cardHover">
         <span :class="[ 'w-full', 'h-1', 'rounded-t-full', cardRibbonColor ]"></span>
         <div class="flex flex-row items-center mt-6 mb-4">
             <img class="mr-2" :src="cardIcon" alt="Social media icon" />

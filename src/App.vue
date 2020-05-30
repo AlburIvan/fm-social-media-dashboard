@@ -1,18 +1,18 @@
 
 <template>
-  <div id="app" class="flex flex-col min-h-screen p-6 px-8 lg:px-32 bg-app lg:bg-app">
+  <div id="app" class="flex flex-col min-h-screen p-6 px-8 md:px-20 lg:px-48 bg-app lg:bg-app">
     <header>
         <h1 class="text-xl font-bold text-left lg:text-3xl text-cardText">Social Media Dashboard</h1>
 
         <div class="flex flex-col justify-between lg:flex-row">
             <h6 class="text-sm font-bold text-text">Total Followers: 23,004</h6>
-            <hr class="my-4 border-gray-600 lg:hidden">
+            <hr class="my-4 border-gray-600 md:hidden lg:hidden">
             <DarkModeToggle />
         </div>
         
     </header>
 
-    <div class="flex flex-col my-8 mt-12 space-y-8 lg:space-x-4 lg:space-y-0 lg:justify-between md:flex-row lg:flex-row ">
+    <div class="grid my-8 mt-12 space-y-8 md:gap-6 lg:gap-6 md:grid-cols-2 lg:grid-cols-4 md:space-y-0 lg:space-y-0">
         <template v-for="socialCard in socialCards" >
             <SocialMediaCard :key="socialCard.icon" 
                 :icon="socialCard.icon" 
@@ -23,12 +23,12 @@
         </template>
     </div>
 
-    <h2 class="text-xl font-bold text-left lg:text-2xl text-cardText md:text-center lg:mt-10">Overview - Today</h2>
+    <h2 class="text-xl font-bold text-left lg:text-2xl text-cardText lg:mt-10">Overview - Today</h2>
     
-    <div class="flex flex-col flex-wrap justify-between my-8 lg:flex-row">
+    <div class="grid my-8 md:gap-4 lg:gap-6 md:grid-cols-2 lg:grid-cols-4 ">
 
-        <template v-for="overviewCard in overviewCards">
-            <OverviewCard :key="overviewCard.value * new Date().getTime()"
+        <template v-for="(overviewCard, index) in overviewCards">
+            <OverviewCard :key="index * new Date().getTime()"
                 :metric="overviewCard.metric" 
                 :platform="overviewCard.platform" 
                 :value="overviewCard.value" 

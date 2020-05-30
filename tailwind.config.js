@@ -6,7 +6,8 @@ module.exports = {
 			body: [ "Inter", "sans-serif"],
 		},
 		screens: {
-			sm: "375px",
+            sm: "375px",
+            md: "648px",
 			lg: "1440px",
         },
         letterSpacing: {
