@@ -25,7 +25,24 @@ export default {
     props: [ 'icon', 'nameHandle', 'followerCount', 'counter' ],
     computed: {
         cardRibbonColor() {
-            return `bg-${this.icon}`
+
+            // refactored to make them non purgable by PurgeCSS
+            switch (this.icon) {
+                case 'facebook':
+                    return 'bg-facebook'
+                
+                case 'twitter':
+                    return 'bg-twitter'
+                
+                case 'instagram':
+                    return 'bg-instagram'
+                
+                case 'youtube':
+                    return 'bg-youtube'
+            
+                default:
+                    return 'bg-facebook';
+            }
         },
         cardIcon() {
             let iconName = `icon-${this.icon}.svg`
